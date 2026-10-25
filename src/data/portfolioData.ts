@@ -1,0 +1,261 @@
+import { Project, ExperienceItem, EducationItem } from '../types/portfolio';
+
+export const personalInfo = {
+  name: 'Palak Pandey',
+  role: 'Software Developer & AI Engineer',
+  tagline: 'Building high-performance full-stack web applications and AI-powered workflow automation.',
+  bio: 'I’m a final-year B.Tech IT student (AI/ML focus) at Pillai College of Engineering, with a strong foundation in C, C++, Java and Python and hands-on experience with React, Next.js, TypeScript, Flask and PHP/MySQL. I love problem solving and care about writing efficient, maintainable code.',
+  status: 'Open to SDE / Full-Stack & Intern Roles',
+  email: 'palakpandey254@gmail.com',
+  location: 'Mumbai Metropolitan Region, India',
+  linkedin: 'https://www.linkedin.com/in/palak-pandey-745a33323',
+  github: 'https://github.com/Palak2508',
+  photo: '/assets/aistudio/Palak_profile_fprmal_74d0ad2d.jpeg',
+  resumePdf: '/assets/aistudio/Profile__2__3e5397a2.pdf',
+};
+
+export const metrics = [
+  {
+    label: 'CGPA / 10',
+    value: '8.6',
+    unit: '',
+    description: 'B.Tech IT (AI & ML Focus)',
+  },
+  {
+    label: 'Records analysed',
+    value: '3,900+',
+    unit: '',
+    description: 'Preprocessed at HappieLoop with Python & SQL',
+  },
+  {
+    label: 'CSI chapter members',
+    value: '200+',
+    unit: '',
+    description: 'Led outreach as Joint PR Head',
+  },
+];
+
+export const projects: Project[] = [
+  {
+    id: 'virality-prediction',
+    title: 'Virality Prediction System',
+    category: 'ai',
+    categoryLabel: 'Multimodal AI',
+    tagline: 'Predicting social media virality combining NLP, CNN image features, and XGBoost',
+    summary: 'A major AI project engineered to predict social media content virality using multimodal data fusion. Leveraged NLP and TF-IDF for text caption analysis, MobileNetV2 CNN transfer learning for visual features, and an XGBoost classifier for joint classification.',
+    image: '/src/assets/images/project_sih_workflow_1792932558116.jpg',
+    tags: ['Python', 'TF-IDF', 'CNN / MobileNetV2', 'Multimodal Fusion', 'XGBoost', 'NLP'],
+    features: [
+      'Developed an AI-powered system to predict social media content virality using multimodal data',
+      'Applied NLP and TF-IDF vectorization to extract meaningful features from textual captions',
+      'Leveraged MobileNetV2 and transfer learning (CNN for image data) to extract visual features from images',
+      'Integrated textual, visual, and structured metadata through multimodal feature fusion',
+      'Implemented an XGBoost classifier to predict viral and non-viral content',
+      'Performed data preprocessing, feature engineering, and dataset preparation to improve model reliability',
+      'Evaluated model performance using classification metrics such as precision, recall, F1-score, and accuracy',
+      'Compared multimodal predictions with a tabular-only baseline to assess the value of combining multiple data modalities',
+    ],
+    architecture: 'Dual-branch multimodal pipeline: Text caption branch (TF-IDF/NLP) + Visual media branch (MobileNetV2 CNN) fused into dense representation vector feeding XGBoost classifier.',
+    impact: 'Outperformed unimodal and tabular-only baselines with superior F1-score and robustness across diverse social post formats.',
+    liveUrl: '#',
+    githubUrl: 'https://github.com/Palak2508',
+  },
+  {
+    id: 'sih-workflow',
+    title: 'Smart India Hackathon 2026',
+    category: 'ai',
+    categoryLabel: 'Gen AI',
+    tagline: 'Institutional request workflow automation with Gemini API, RBAC, and audit logs',
+    summary: 'Built with a team of 6 for Smart India Hackathon 2026 (placed 3rd in internal round). An automated enterprise platform for classifying and routing institutional requests using Google Gemini API for document extraction and SLA tracking.',
+    image: '/src/assets/images/project_sih_workflow_1792932558116.jpg',
+    tags: ['Next.js', 'TypeScript', 'Tailwind', 'Gemini API', 'PostgreSQL', 'Role-Based Access'],
+    features: [
+      'Automated semantic request classification and structured document parameter extraction via Gemini API',
+      'Configurable multi-stage SLA-tracked approval chains with dynamic escalation rules',
+      'Granular Role-Based Access Control (RBAC) separating students, faculty, and administrative departments',
+      'Cryptographically verified audit logs for institutional governance',
+      'Real-time status tracking dashboard with bottleneck visual alerts',
+    ],
+    architecture: 'Next.js App Router with TypeScript, server-side Gemini API pipeline, relational PostgreSQL schema, and real-time SLA state machine.',
+    impact: 'Placed 3rd in the internal round out of institutional teams, cutting request processing time from days to seconds.',
+    liveUrl: '#',
+    githubUrl: 'https://github.com/Palak2508',
+  },
+  {
+    id: 'rag-assistant',
+    title: 'College Knowledge Assistant (RAG)',
+    category: 'ai',
+    categoryLabel: 'RAG & Vector AI',
+    tagline: 'Context-grounded academic assistant powered by Llama 3.2 3B and ChromaDB',
+    summary: 'An offline-capable Retrieval-Augmented Generation (RAG) assistant designed for college course repositories, regulations, and departmental syllabus documents.',
+    image: '/src/assets/images/project_rag_assistant_1792932558466.jpg',
+    tags: ['Python', 'Llama 3.2 3B', 'ChromaDB', 'Streamlit', 'LangChain', 'Vector Search'],
+    features: [
+      'Document parsing and recursive chunking pipeline optimized for academic PDFs and tables',
+      'High-dimensional vector embedding generation and indexed retrieval via ChromaDB',
+      'Grounded inference using local Llama 3.2 3B model to eliminate hallucinations',
+      'Source attribution badges providing page and section citations with synthesized answers',
+      'Lightweight Streamlit user interface featuring prompt history and reference inspector',
+    ],
+    architecture: 'Python ingestion script, ChromaDB vector store, LangChain prompt orchestration layer, and Streamlit interactive web frontend.',
+    impact: 'Delivered accurate course policy and curriculum queries in seconds with zero external cloud API dependencies.',
+    liveUrl: '#',
+    githubUrl: 'https://github.com/Palak2508',
+  },
+  {
+    id: 'dhan-bank',
+    title: 'Dhan Bank — Core Banking Portal',
+    category: 'fullstack',
+    categoryLabel: 'Full-Stack Banking',
+    tagline: 'Full-stack internet banking application with transactional integrity and ledger audit',
+    summary: 'A robust online banking platform implementing ACID-compliant financial transfers, customer account ledgering, real-time balance checks, and strict server-side validation against race conditions and invalid transfers.',
+    image: '/src/assets/images/project_dhan_bank_1792932559938.jpg',
+    tags: ['PHP', 'MySQL', 'JavaScript', 'Tailwind CSS', 'ACID Transactions', 'Financial Security'],
+    features: [
+      'Peer-to-peer balance transfer engine with database transaction rollbacks and balance locking',
+      'Strict server-side validation rejecting negative transfers, self-transfers, and overdraft states',
+      'Chronological ledger history with searchable filters and downloadable transaction statements',
+      'Session security protocols, parameterized queries against SQL injection, and hashed credentials',
+      'Administrative dashboard to monitor system balances and verify movements',
+    ],
+    architecture: 'PHP MVC architecture backed by MySQL relational tables with foreign key constraints, atomic transactions, and responsive frontend UI.',
+    impact: 'Successfully passed rigorous security transfer vulnerability test suites with zero reconciliation drift.',
+    liveUrl: '#',
+    githubUrl: 'https://github.com/Palak2508',
+  },
+  {
+    id: 'lets-shyp',
+    title: "Let's Shyp — 5-Stage Logistics Booking Flow",
+    category: 'frontend',
+    categoryLabel: 'Logistics Flow',
+    tagline: 'Multi-stage parcel booking system with real-time volumetric pricing & state persistence',
+    summary: 'A high-conversion 5-stage logistics booking flow engineered in React and TypeScript. Features volumetric weight calculators, dynamic carrier rate recalculations, and resilient state persistence across browser reloads.',
+    image: '/src/assets/images/project_shyp_logistics_1792932559621.jpg',
+    tags: ['React', 'TypeScript', 'Tailwind CSS', 'State Persistence', 'Form UX', 'Pricing Engine'],
+    features: [
+      '5-stage guided booking wizard: Pickup Details, Parcel Dimensions, Carrier Selection, Add-ons, and Payment',
+      'Instant volumetric weight calculations and real-time tier pricing based on origin-destination zones',
+      'Local storage hydration preventing lost user input on unexpected reloads or page back-navigation',
+      'Form validation with contextual field-level error feedback and accessible keyboard navigation',
+      'Booking summary generation with printable PDF waybill preview',
+    ],
+    architecture: 'Modular React state machine with TypeScript types, custom hooks for storage persistence, and Tailwind CSS responsive styling.',
+    impact: 'Achieved sub-100ms pricing recalculations and a friction-free user booking experience.',
+    liveUrl: '#',
+    githubUrl: 'https://github.com/Palak2508',
+  },
+  {
+    id: 'multilingual-chatbot',
+    title: 'Multilingual Government Schemes Chatbot',
+    category: 'ai',
+    categoryLabel: 'NLP Chatbot',
+    tagline: 'Public welfare discovery chatbot supporting English, Hindi, and Marathi',
+    summary: 'A civic-tech natural language assistant helping citizens discover and evaluate eligibility for government welfare programs across linguistic barriers.',
+    image: '/src/assets/images/project_rag_assistant_1792932558466.jpg',
+    tags: ['Python', 'Flask', 'REST APIs', 'NLP Intent Matching', 'Multilingual', 'JSON Database'],
+    features: [
+      'Cross-lingual intent classification covering citizen queries in English, Hindi, and Marathi',
+      'Structured JSON scheme repository containing eligibility criteria, subsidy tiers, and required documents',
+      'Interactive eligibility questionnaire narrowing down relevant schemes based on criteria',
+      'RESTful Flask endpoints engineered for rapid mobile or lightweight web consumption',
+    ],
+    architecture: 'Flask microservice backend with natural language tokenization and fuzzy keyword matching over structured JSON datasets.',
+    impact: 'Made critical welfare information accessible to citizens without requiring English proficiency.',
+    liveUrl: '#',
+    githubUrl: 'https://github.com/Palak2508',
+  },
+];
+
+export const experiences: ExperienceItem[] = [
+  {
+    id: 'happieloop',
+    role: 'Data Analyst Intern',
+    company: 'HappieLoop',
+    location: 'Remote',
+    period: 'July 2026 – August 2026',
+    duration: '2 months',
+    description: 'Cleaned and preprocessed customer dataset to discover retention patterns and empower business decisions.',
+    highlights: [
+      'Cleaned, normalized, and preprocessed 3,900+ raw customer records using Python (Pandas) and SQL, producing analysis-ready datasets',
+      'Wrote SQL queries and ran exploratory analysis on subscription status, age groups, product categories and retention patterns',
+      'Built a Power BI KPI dashboard that made customer segments and purchasing trends easy for the business to interpret',
+      'Identified drop-off trends in recurring subscribers that informed direct product marketing refinements',
+    ],
+    skills: ['Python', 'Pandas', 'SQL', 'Power BI', 'Data Cleaning', 'Exploratory Data Analysis'],
+  },
+  {
+    id: 'csi-head',
+    role: 'Joint PR Head',
+    company: 'Computer Society of India (CSI), PCE Student Chapter',
+    location: 'Mumbai, India',
+    period: '2025 – Present',
+    duration: 'Leadership',
+    description: 'Headed public relations, communication, and event outreach for the 200+ member engineering student chapter.',
+    highlights: [
+      'Spearheaded cross-functional communications across student committees for hackathons, technical workshops, and coding seminars',
+      'Cultivated partnerships with industry speakers and alumni mentors to host technical deep dives',
+      'Boosted participation across college technical symposiums by over 35% through structured multi-channel campaigns',
+    ],
+    skills: ['Public Relations', 'Team Leadership', 'Technical Event Management', 'Community Outreach'],
+  },
+];
+
+export const education: EducationItem = {
+  institution: 'Pillai College of Engineering',
+  degree: 'Bachelor of Technology (B.Tech)',
+  field: 'Information Technology (AI / ML Focus)',
+  period: 'August 2023 – July 2027',
+  score: 'CGPA 8.6 / 10',
+  details: [
+    'Focus on Data Structures, Algorithms, Machine Learning, Database Management Systems, and Software Engineering',
+    'Active participant in competitive programming, algorithmic contests, and national hackathons',
+    'Joint PR Head at Computer Society of India (CSI) student chapter',
+  ],
+};
+
+// Comprehensive list of skills with Top 3 Pinned (C++, Python, React) followed by user's complete catalog
+export interface SkillBadge {
+  name: string;
+  category: string;
+  iconType: 'code' | 'coffee' | 'terminal' | 'globe' | 'database' | 'palette' | 'git' | 'chart' | 'brain' | 'cpu' | 'layers';
+  color: string;
+  pinned?: boolean;
+}
+
+export const allSkills: SkillBadge[] = [
+  // Top 3 pinned skills
+  { name: 'C++', category: 'Core', iconType: 'terminal', color: 'bg-[#a855f7] text-white', pinned: true },
+  { name: 'Python', category: 'AI & Data', iconType: 'code', color: 'bg-[#06b6d4] text-slate-950', pinned: true },
+  { name: 'React', category: 'Frontend', iconType: 'globe', color: 'bg-[#84cc16] text-slate-950', pinned: true },
+
+  // Primary languages & tools
+  { name: 'Java', category: 'Core', iconType: 'coffee', color: 'bg-[#f97316] text-white' },
+  { name: 'C', category: 'Core', iconType: 'terminal', color: 'bg-[#64748b] text-white' },
+  { name: 'JavaScript', category: 'Frontend', iconType: 'code', color: 'bg-[#facc15] text-slate-950' },
+  { name: 'TypeScript', category: 'Frontend', iconType: 'code', color: 'bg-[#3b82f6] text-white' },
+  { name: 'Next.js', category: 'Frontend', iconType: 'globe', color: 'bg-[#9333ea] text-white' },
+  { name: 'SQL', category: 'Database', iconType: 'database', color: 'bg-[#0ea5e9] text-white' },
+  { name: 'MySQL', category: 'Database', iconType: 'database', color: 'bg-[#0284c7] text-white' },
+  { name: 'Flask', category: 'Backend', iconType: 'cpu', color: 'bg-[#f43f5e] text-white' },
+  { name: 'REST APIs', category: 'Backend', iconType: 'layers', color: 'bg-[#f97316] text-white' },
+  { name: 'HTML5', category: 'Frontend', iconType: 'code', color: 'bg-[#ea580c] text-white' },
+  { name: 'CSS3', category: 'Frontend', iconType: 'palette', color: 'bg-[#2563eb] text-white' },
+  { name: 'Tailwind CSS', category: 'Frontend', iconType: 'palette', color: 'bg-[#eab308] text-slate-950' },
+  { name: 'Git', category: 'Tools', iconType: 'git', color: 'bg-[#f97316] text-white' },
+  { name: 'GitHub', category: 'Tools', iconType: 'git', color: 'bg-[#84cc16] text-slate-950' },
+  { name: 'Data Structures', category: 'Fundamentals', iconType: 'terminal', color: 'bg-[#06b6d4] text-slate-950' },
+  { name: 'Algorithms', category: 'Fundamentals', iconType: 'terminal', color: 'bg-[#3b82f6] text-white' },
+  { name: 'Object-Oriented Programming (OOP)', category: 'Fundamentals', iconType: 'cpu', color: 'bg-[#a855f7] text-white' },
+  { name: 'Competitive Programming', category: 'Fundamentals', iconType: 'terminal', color: 'bg-[#84cc16] text-slate-950' },
+  { name: 'Problem Solving', category: 'Fundamentals', iconType: 'brain', color: 'bg-[#f59e0b] text-slate-950' },
+  { name: 'Full-Stack Development', category: 'Engineering', iconType: 'layers', color: 'bg-[#06b6d4] text-slate-950' },
+  { name: 'Operating Systems', category: 'Systems', iconType: 'cpu', color: 'bg-[#64748b] text-white' },
+  { name: 'Software Development Life Cycle (SDLC)', category: 'Engineering', iconType: 'layers', color: 'bg-[#8b5cf6] text-white' },
+  { name: 'Agile Methodologies', category: 'Engineering', iconType: 'layers', color: 'bg-[#10b981] text-slate-950' },
+  { name: 'Generative AI', category: 'AI & Data', iconType: 'brain', color: 'bg-[#f43f5e] text-white' },
+  { name: 'Machine Learning', category: 'AI & Data', iconType: 'brain', color: 'bg-[#a855f7] text-white' },
+  { name: 'LangChain', category: 'AI & Data', iconType: 'brain', color: 'bg-[#0284c7] text-white' },
+  { name: 'Pandas', category: 'AI & Data', iconType: 'chart', color: 'bg-[#9333ea] text-white' },
+  { name: 'NumPy', category: 'AI & Data', iconType: 'chart', color: 'bg-[#0284c7] text-white' },
+  { name: 'Data Analysis', category: 'AI & Data', iconType: 'chart', color: 'bg-[#10b981] text-slate-950' },
+];
